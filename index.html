@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGIS LP2B Kabupaten Bogor</title>
+    <script>
+        (() => {
+            const currentOrigin = window.location.origin;
+            const defaultAuthOrigin = 'http://localhost:8000';
+            const loginUrl = new URL('/login', currentOrigin === 'http://localhost:8080' ? defaultAuthOrigin : currentOrigin);
+            window.location.replace(loginUrl.href);
+        })();
+    </script>
+</head>
+<body>
+    <p>WebGIS diarahkan ke aplikasi yang memerlukan login.</p>
+    <p><a id="login-link" href="/login">Buka halaman login WebGIS</a></p>
+    <script>
+        const currentOrigin = window.location.origin;
+        const defaultAuthOrigin = 'http://localhost:8000';
+        const loginLink = document.getElementById('login-link');
+        const loginUrl = new URL('/login', currentOrigin === 'http://localhost:8080' ? defaultAuthOrigin : currentOrigin);
+        loginLink.href = loginUrl.href;
+    </script>
+</body>
+</html>

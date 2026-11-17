@@ -1,0 +1,68 @@
+/* Mengatur gaya dasar seluruh halaman. */
+body {
+    margin: 0; /* Menghapus jarak luar bawaan browser. */
+    padding: 0; /* Menghapus jarak dalam bawaan browser. */
+    font-family: Arial, sans-serif; /* Menggunakan Arial dan font sans-serif sebagai cadangan. */
+} /* Mengakhiri aturan gaya halaman. */
+
+/* Mengatur ukuran elemen peta. */
+#map {
+    width: 100%; /* Membuat lebar peta memenuhi lebar wadahnya. */
+    height: 100%; /* Membuat tinggi peta memenuhi tinggi wadahnya. */
+} /* Mengakhiri aturan ukuran peta. */
+
+/* Mengatur tampilan label nama kecamatan. */
+.kecamatan-label {
+    border: 0; /* Menghilangkan garis tepi label. */
+    background: transparent; /* Membuat latar label transparan agar hanya teks yang terlihat. */
+    box-shadow: none; /* Menghilangkan bayangan wadah label bawaan. */
+    color: #111827; /* Mengatur warna teks label menjadi gelap. */
+    font-size: 11px; /* Mengatur ukuran teks label. */
+    font-weight: 600; /* Membuat teks label agak tebal. */
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; /* Memberi garis terang di sekeliling teks agar terbaca di atas peta. */
+    white-space: nowrap; /* Mencegah nama kecamatan terpotong menjadi beberapa baris. */
+} /* Mengakhiri aturan label kecamatan. */
+
+/* Mengatur tata letak dan tampilan kotak legenda peta. */
+.map-legend {
+    box-sizing: border-box; /* Memasukkan padding dan border dalam perhitungan ukuran elemen. */
+    width: max-content; /* Menyesuaikan lebar dengan isi legenda. */
+    min-width: 0; /* Mengizinkan legenda menyusut bila ruang terbatas. */
+    max-width: calc(100vw - 32px); /* Membatasi lebar agar tetap muat di layar dengan jarak sisi 32 piksel. */
+    padding: 12px 14px; /* Memberi ruang di dalam kotak legenda. */
+    border: 1px solid #d1d5db; /* Memberi garis tepi tipis berwarna abu-abu. */
+    border-radius: 8px; /* Membulatkan sudut kotak legenda. */
+    background: #ffffff; /* Memberi latar belakang putih. */
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.2); /* Memberi bayangan halus di bawah kotak. */
+    color: #26352b; /* Mengatur warna teks utama legenda. */
+    font-size: 13px; /* Mengatur ukuran teks legenda. */
+    line-height: 1.5; /* Mengatur jarak antarbaris teks. */
+} /* Mengakhiri aturan kotak legenda. */
+
+/* Mengatur tampilan judul legenda. */
+.map-legend-title {
+    display: block; /* Menampilkan judul sebagai elemen blok. */
+    margin-bottom: 7px; /* Memberi jarak di bawah judul. */
+    padding-bottom: 6px; /* Memberi ruang antara judul dan garis pemisah. */
+    border-bottom: 1px solid #e5e7eb; /* Membuat garis pemisah tipis di bawah judul. */
+    color: #14532d; /* Mengatur warna judul menjadi hijau tua. */
+    font-size: 13px; /* Mengatur ukuran teks judul. */
+    letter-spacing: 0.04em; /* Memberi jarak tipis antarhuruf judul. */
+} /* Mengakhiri aturan judul legenda. */
+
+/* Mengatur susunan setiap baris item legenda. */
+.map-legend-item {
+    display: flex; /* Menyusun ikon dan keterangan dalam satu baris fleksibel. */
+    min-height: 24px; /* Menetapkan tinggi minimum tiap baris item. */
+    align-items: center; /* Menyelaraskan ikon dan teks secara vertikal di tengah. */
+    gap: 9px; /* Memberi jarak antara ikon dan keterangannya. */
+    white-space: nowrap; /* Mencegah keterangan item berpindah ke baris berikutnya. */
+} /* Mengakhiri aturan item legenda. */
+
+/* Mengatur ukuran dan perilaku ikon pada legenda. */
+.map-legend-icon {
+    display: block; /* Menampilkan ikon sebagai elemen blok. */
+    width: 24px; /* Menetapkan lebar ikon menjadi 24 piksel. */
+    height: 10 px; /* Maksudnya mengatur tinggi ikon 10 px, tetapi spasi membuat deklarasi ini tidak valid dan diabaikan browser. */
+    flex: 0 0 24px; /* Mencegah ikon menyusut atau melebar dari lebar 24 piksel. */
+} /* Mengakhiri aturan ikon legenda. */
